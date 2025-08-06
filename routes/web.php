@@ -15,9 +15,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [InvoiceController::class, 'sales'])->name('invoice.sales');
+Route::get('/get-transaction-by-date', [InvoiceController::class, 'getTransactionByDate']);
+Route::get('/sales-details', [InvoiceController::class, 'getSalesDetails']);
+
+
+//Route::get('/', function () {
+//
+//    return view('welcome');
+//});
 
 Route::get('/dashboard', function () {
     return view('dashboard');
