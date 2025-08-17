@@ -38,9 +38,10 @@ return [
     'guards' => [
         'web' => [
             'driver' => 'session',
-            'provider' => 'users',
+            'provider' => 'tenant_users',
         ],
     ],
+
 
     /*
     |--------------------------------------------------------------------------
@@ -63,6 +64,11 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+
+        'tenant_users' => [
+            'driver' => 'eloquent',
+            'model'  => \App\Models\Tenant\TenantUser::class,
         ],
 
         // 'users' => [

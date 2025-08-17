@@ -93,6 +93,12 @@ return [
             // 'trust_server_certificate' => env('DB_TRUST_SERVER_CERTIFICATE', 'false'),
         ],
 
+        'odbc' => [
+            'driver' => 'odbc',
+            'dsn' => 'odbc:Driver=FreeTDS;Server=124.29.208.110;Port=1433;Database=ZeePOS;TDS_Version=7.4;Encrypt=yes;TrustServerCertificate=yes',
+            'username' => env('DB_USERNAME'),
+            'password' => env('DB_PASSWORD'),
+        ],
     ],
 
     /*
